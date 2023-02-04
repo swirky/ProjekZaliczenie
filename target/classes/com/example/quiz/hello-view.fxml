@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="319.0" prefWidth="355.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quiz.QuizController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label fx:id="pathLabel" text="Wczytaj quiz z pliku:" />
+    <TextField fx:id="pathField" alignment="CENTER" text="quiz.txt" />
+
+    <Label fx:id="pytanieText" text="Rozpocznij QUIZ" />
+    <RadioButton fx:id="rdA" managed="false" visible="false"><toggleGroup><ToggleGroup fx:id="group" /></toggleGroup></RadioButton>
+    <RadioButton fx:id="rdB" managed="false" visible="false"><toggleGroup><fx:reference source="group" /></toggleGroup></RadioButton>
+    <RadioButton fx:id="rdC" managed="false" visible="false"><toggleGroup><fx:reference source="group" /></toggleGroup></RadioButton>
+    <RadioButton fx:id="rdD" managed="false" visible="false"><toggleGroup><fx:reference source="group" /></toggleGroup></RadioButton>
+    <Button fx:id="odpBtn" onAction="#odpButtonClick" text="Zagraj w ten quiz" />
+
+    <Button fx:id="createBtn" onAction="#onCreateBtnClick" text="Utworz quiz" />
+
+    <Label fx:id="pytanieLabel" managed="false" text="Treść pytania" visible="false" />
+    <TextField fx:id="pytanieField" managed="false" visible="false" />
+
+    <Label fx:id="aLabel" managed="false" text="Odpowiedź A" visible="false" />
+    <TextField fx:id="aField" managed="false" visible="false" />
+
+    <Label fx:id="bLabel" managed="false" text="Odpowiedź B" visible="false" />
+    <TextField fx:id="bField" managed="false" visible="false" />
+
+    <Label fx:id="cLabel" managed="false" text="Odpowiedź C" visible="false" />
+    <TextField fx:id="cField" managed="false" visible="false" />
+
+    <Label fx:id="dLabel" managed="false" text="Odpowiedź D" visible="false" />
+    <TextField fx:id="dField" managed="false" visible="false" />
+
+    <Label fx:id="popLabel" managed="false" text="Poprawna(wpisz:a,b,c lub d)" visible="false" />
+    <TextField fx:id="popField" managed="false" visible="false" />
+
+    <Button fx:id="nastBtn" managed="false" onAction="#addNext" text="Dodaj pytanie" visible="false" />
+    <Button fx:id="zapiszBtn" managed="false" onAction="#saveQuiz" text="Zapisz Quiz" visible="false" />
+
+    <Label fx:id="newPathLabel" managed="false" text="Zapisz do pliku" visible="false" />
+    <TextField fx:id="newPathField" managed="false" visible="false" />
+    <Button fx:id="newPathBtn" managed="false" onAction="#saveQuizConfirm" text="Zapisz" visible="false" />
+    <Button fx:id="usunBtn" onAction="#usunQuiz" text="Usuń ten quiz" />
+
+
+    <Button fx:id="powrotBtn" managed="false" onAction="#powrotMenu" text="Powrót do menu" visible="false" />
+    <Button fx:id="wyjdzButton" mnemonicParsing="false" onAction="#onWyjdzButtonCLick" text="Wyjdź" />
+
+</VBox>
